@@ -5,6 +5,17 @@ void main() {
   runApp(const MainApp());
 }
 
+class App extends StatelessWidget {
+  const App({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: Scaffold(),
+    );
+  }
+}
+
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
@@ -20,6 +31,9 @@ class MainApp extends StatelessWidget {
           title: const Text(
             'Person Profile',
           ),
+          actions: [
+            //TODO: Exibir versão do App.
+          ],
         ),
         body: Column(
           children: [
@@ -72,11 +86,12 @@ class MainApp extends StatelessWidget {
             ),
             Expanded(
               child: Column(
-                children: const [
+                children: [
                   ListTile(
                     leading: Icon(FontAwesomeIcons.instagram),
                     title: Text('Ricieri Silva'),
                     subtitle: Text('ricieri@gmail.com'),
+                    onTap: () {},
                   ),
                 ],
               ),
